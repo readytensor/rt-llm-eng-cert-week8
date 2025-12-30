@@ -63,7 +63,10 @@ def build_vllm_command(config: dict) -> list[str]:
         cmd.extend(["--max-loras", str(config["lora"].get("max_loras", 1))])
         cmd.extend(["--max-lora-rank", str(config["lora"].get("max_lora_rank", 64))])
         if config["lora"].get("adapter_path"):
-            cmd.extend(["--lora-modules", f"adapter={config['lora']['adapter_path']}"])
+            adapter_name = config["lora"].get("adapter_name", "lora")
+            cmd.extend(
+                ["--lora-modules", f"{adapter_name}={config['lora']['adapter_path']}"]
+            )
 
     # Quantization
     if config["quantization"].get("method"):

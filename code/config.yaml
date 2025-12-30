@@ -4,8 +4,8 @@
 # Model settings
 model:
   name: "meta-llama/Llama-3.2-1B-Instruct"
-  dtype: "float16"  # Options: float16, bfloat16, auto
-  max_model_len: 4096
+  dtype: "auto"
+  max_model_len: 2048
   trust_remote_code: false
 
 # Server settings
@@ -15,8 +15,8 @@ server:
 
 # GPU settings
 gpu:
-  memory_utilization: 0.9  # Fraction of GPU memory to use (0.0 - 1.0)
-  tensor_parallel_size: 1  # Number of GPUs for tensor parallelism
+  memory_utilization: 0.25
+  tensor_parallel_size: 1
 
 # Generation defaults
 generation:
@@ -26,18 +26,18 @@ generation:
 
 # Performance settings
 performance:
-  enforce_eager: false  # Set true to disable CUDA graphs (useful for debugging)
-  enable_prefix_caching: true
+  enforce_eager: true  # Disable CUDA graphs
+  enable_prefix_caching: false
   disable_log_requests: false
 
-# LoRA settings (optional)
+# LoRA settings
 lora:
   enable: true
-  adapter_path: ""  # Path to LoRA adapter
+  adapter_name: "lora"  # Name to reference this adapter in API calls
+  adapter_path: "moo3030/Llama-3.2-1B-QLoRA-Summarizer-adapters"
   max_loras: 1
   max_lora_rank: 64
 
 # Quantization (optional)
 quantization:
   method: null  # Options: null, awq, gptq, fp8
-
