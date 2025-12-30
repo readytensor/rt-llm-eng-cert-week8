@@ -1,0 +1,12 @@
+unit1-lessons
+unit2-lessons
+
+.DS_Store
+__pycache__
+outline-split.md
+.cursor/
+images
+
+.env
+test.ipynb
+.venv/
