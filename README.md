@@ -190,26 +190,8 @@ rt-llm-eng-cert-week8/
 │   ├── deploy_baseline.py       # Baseline FastAPI server
 │   ├── inference_baseline.ipynb # Baseline benchmarking notebook
 │   └── inference_vllm.ipynb     # vLLM deployment notebook
-├── images/
-│   ├── lesson2/                 # TGI vs vLLM diagrams
-│   ├── lesson4/                 # GPTQ process diagrams
-│   └── lesson5/                 # Quantization diagrams
-├── unit1-lessons/               # Theory lessons (Module A)
-│   ├── lesson1-inference-basics.md
-│   ├── lesson2-benchmarking.md
-│   ├── lesson3-kv-cache.md
-│   ├── lesson4-attention-optimizations.md
-│   ├── lesson5-quantization.md
-│   └── lesson6-scheduling-optimizations.md
-├── unit2-lessons/               # Practice lessons (Module B)
-│   ├── overview.md
-│   ├── lesson0-hf-baseline.md
-│   ├── lesson1-vllm.md
-│   ├── lesson2-tgi.md
-│   ├── lesson3-sglang.md
-│   ├── lesson4-gpu-quantization.md
-│   ├── lesson5-gguf-llamacpp.md
-│   └── lesson6-nim-evaluation.md
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
